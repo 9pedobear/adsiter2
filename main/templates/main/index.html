@@ -43,14 +43,9 @@
 				</div>
 				<div class="fashion_menu">
                     	<ul>
-                    		<li class="active"><a href="#">Auto Mobile</a></li>
-                    		<li><a href="#">Fashion</a></li>
-                    		<li><a href="#">Mother& Child</a></li>
-                    		<li><a href="#">Jobs</a></li>
-                    		<li><a href="#">Real estate</a></li>
-                    		<li><a href="#">Pets</a></li>
-                    		<li><a href="#">Sport</a></li>
-                    		<li><a href="#">More</a></li>
+							{% for category in blablabla %}
+                    		<li><a href="#">{{ category.title }}</a></li>
+							{% endfor %}
                     	</ul>
                     </div>
 			</div>

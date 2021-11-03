@@ -9,11 +9,25 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.db.models import F
+
+class PostView(DetailView):
+    model = Post
+    context_object_name = 'rarara'
+    template_name = 'main/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.object.views = F('views') + 1
+        self.object.save()
+        self.object.refresh_from_db()
+        return context
+
 
 
 @login_required
@@ -77,11 +91,13 @@ def oauth(request):
     return render(request, 'index.html')
 
 
-def index(request):
-    return render(
-        request,
-        template_name='main/index.html'
-    )
+
+class Index(ListView):
+    model = Category
+    context_object_name = 'blablabla'
+    template_name = 'main/index.html'
+
+
 
 
 def about(request):
