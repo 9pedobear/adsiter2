@@ -77,11 +77,13 @@ def oauth(request):
     return render(request, 'index.html')
 
 
-def index(request):
-    return render(
-        request,
-        template_name='main/index.html'
-    )
+
+class Index(ListView):
+    model = Category
+    context_object_name = 'blablabla'
+    template_name = 'main/index.html'
+
+
 
 
 def about(request):

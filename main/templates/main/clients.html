@@ -18,12 +18,9 @@
                             <h1 class="promoted_text">CLIENTS <span
                                     style="border-bottom: 5px solid #4bc714;">REVIEW</span></h1>
                             {% for client in clients %}
-                            {% if post.image %}
+
                             <div class="client_img"><img src="{{ client.image.url }}" width="300"></div>
-                            {% else %}
-                            <h2>No photo</h2>
-                            </div>
-                            {% endif %}
+
                             <h1 class="client_text">{{ client.name }}</h1>
                             <p class="adiser_text">{{ client.create_at }}</p>
                             <p class="long_text">{{ client.review }}</p>

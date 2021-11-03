@@ -28,6 +28,7 @@ class PostAdmin(admin.ModelAdmin):
                     'slug',)
     list_filter = ('user',
                    'title',)
+    list_display_links = ("title",)
     save_on_top = True
 
 
@@ -40,6 +41,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_display = ('title',
                     'slug',)
+    list_display_links = ("title",)
     save_on_top = True
 
 class ClientsReviewAdmin(admin.ModelAdmin):
@@ -51,6 +53,7 @@ class ClientsReviewAdmin(admin.ModelAdmin):
                     'user',
                     'slug',)
     list_filter = ('name',)
+    list_display_links = ("name", )
     save_on_top = True
 
 
