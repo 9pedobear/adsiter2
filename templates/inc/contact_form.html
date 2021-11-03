@@ -1,0 +1,18 @@
+<div class="col-md-6">
+    <div class="input_main">
+        <div class="container">
+            <form action="#" method="post">
+                <div class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="row form-group mt-4">
+                    <div class="col-md-12">
+                        <input type="submit" value="Отправить" class="submit_bt">
+                    </div>
+                </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

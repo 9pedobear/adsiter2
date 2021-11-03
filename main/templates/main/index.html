@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<!-- banner section start -->
+	<div class="layout_padding banner_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="banner_taital">All You Need Is Here & Classified</h1>
+					<p class="browse_text">Browse from more than 15,000,000 adverts while new ones come on daily bassis</p>
+					<div class="banner_bt">
+						<button class="read_bt">Read More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner section end -->
+	<!-- search box start -->
+	<div class="container">
+		<div class="search_box">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+                        <input type="text" class="email_boton" placeholder="Search for" name="Email">
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+                        <input type="text" class="email_boton" placeholder="Loction in" name="Email">
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+                        <input type="text" class="email_boton" placeholder="category" name="Email">
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+                        <button class="search_bt">Search</button>
+                    </div>
+				</div>
+				<div class="fashion_menu">
+                    	<ul>
+                    		<li class="active"><a href="#">Auto Mobile</a></li>
+                    		<li><a href="#">Fashion</a></li>
+                    		<li><a href="#">Mother& Child</a></li>
+                    		<li><a href="#">Jobs</a></li>
+                    		<li><a href="#">Real estate</a></li>
+                    		<li><a href="#">Pets</a></li>
+                    		<li><a href="#">Sport</a></li>
+                    		<li><a href="#">More</a></li>
+                    	</ul>
+                    </div>
+			</div>
+		</div>
+	</div>
+	<!-- search box end -->
+	<!-- section POPULAR STORES start -->
+    <div class="layout_padding popular_section">
+    	<div class="container">
+    		<h1 class="popular_taital">POPULAR <span style="border-bottom: 5px solid #4bc714;">STORES</span></h1>
+    		<div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="popular_section_2">
+    			    <div class="slider_img"><img src="{% static 'images/img-5.png' %}" style="max-width: 100%;"></div>
+    			        <h2 class="electronic_text">Electronic shop</h2>
+    			        <p class="contrary_text">Contrary to popular belief, Lorem 
+                        Ipsum is not simply random text. It has roots in a piece of classical Latin literature from</p>
+                        <button class="view_bt"><a href="#">VIEW ADS</a></button>
+    		        </div>
+                </div>
+            <div class="carousel-item">
+                <div class="popular_section_2">
+    			    <div class="slider_img"><img src="{% static 'images/img-5.png' %}"style="max-width: 100%;"></div>
+    			        <h2 class="electronic_text">Electronic shop</h2>
+    			        <p class="contrary_text">Contrary to popular belief, Lorem 
+                        Ipsum is not simply random text. It has roots in a piece of classical Latin literature from</p>
+                        <button class="view_bt"><a href="#">VIEW ADS</a></button>
+    		        </div>
+                </div>
+            <div class="carousel-item">
+                <div class="popular_section_2">
+    			    <div class="slider_img"><img src="{% static 'images/img-5.png' %}"style="max-width: 100%;"></div>
+    			    <h2 class="electronic_text">Electronic shop</h2>
+    			    <p class="contrary_text">Contrary to popular belief, Lorem 
+                    Ipsum is not simply random text. It has roots in a piece of classical Latin literature from</p>
+                    <button class="view_bt"><a href="#">VIEW ADS</a></button>
+    		    </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-right"></i>
+        </a>
+
+    </div>
+    </div>
+    </div>
+	<!-- section POPULAR STORES end -->
+
+{% endblock %}
