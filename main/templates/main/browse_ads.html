@@ -20,7 +20,7 @@
                     <div class="eye-icon"><img src="{% static 'images/eye-icon.png' %}"><span class="like-icon"><img
                             src="{% static 'images/like-icon.png' %}"></span></div>
                     <div class="numbar_text">{{ post.views }}<span class="like-icon">{{ post.likes }}</span></div>
-                    <button class="mobile_bt"><a href="#">Mobiles</a></button>
+                    <button class="mobile_bt"><a href="{{ post.get_absolute_url }}">Подробнее</a></button>
                     <br>
                     <br>
                     <br>

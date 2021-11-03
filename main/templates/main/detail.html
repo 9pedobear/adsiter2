@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+    <img src="{{ rarara.image.url }}" alt="" width="600">
+    <h2><b>Наименование</b></h2><h2>{{ rarara.title }}</h2>
+    <h2><b>Категрия</b></h2><h2>{{ rarara.category }}</h2>
+    <h2><b>Лайки</b></h2><h2>{{ rarara.likes }}</h2>
+    <h2><b>Просмотры</b></h2><h2>{{ rarara.views }}</h2>
+</div>
+
+{% endblock %}
