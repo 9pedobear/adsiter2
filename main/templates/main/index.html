@@ -44,7 +44,7 @@
             <div class="fashion_menu">
                 <ul>
                     {% for category in blablabla %}
-                    <li><a href="{% url 'category' %}">{{ category.title }}</a></li>
+                    <li><a href="/">{{ category.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -53,8 +53,33 @@
 </div>
 <!-- search box end -->
 <!-- section POPULAR STORES start -->
-{% block show_category_posts %}
-{% endblock %}
+<div class="layout_padding popular_section">
+    <div class="container">
+        <h1 class="popular_taital">POPULAR <span style="border-bottom: 5px solid #4bc714;">STORES</span></h1>
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="popular_section_2">
+                        <div class="slider_img"><img src="" style="max-width: 100%;">
+                        </div>
+                        <h2 class="electronic_text"></h2>
+                        <p class="contrary_text"></p>
+                        <button class="view_bt"><a href="">Подробнее</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-right"></i>
+            </a>
+
+        </div>
+    </div>
+</div>
 <!-- section POPULAR STORES end -->
 
 {% endblock %}
