@@ -162,3 +162,20 @@ class PostByCategory(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = Category.objects.get(pk=self.kwargs['pk'])
         return context
+
+
+class Search(ListView):
+    model = Post
+    template_name = 'main/search_posts.html'
+    context_object_name = 'hahaha'
+
+
+    def get_queryset(self):
+        return Post.objects.filter(title__icontains=self.request.GET.get('s'))
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['s'] = f"s={self.request.GET.get('s')}&"
+        return context
+
+

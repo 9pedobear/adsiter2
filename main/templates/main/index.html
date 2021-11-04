@@ -26,21 +26,16 @@
                     <input type="text" class="email_boton" placeholder="Search for" name="Email">
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <input type="text" class="email_boton" placeholder="Loction in" name="Email">
-                </div>
+
+    <div class="col-sm-3">
+        <form action="{% url 'search' %}" method="get">
+            <div class="form-group">
+                <input type="text" placeholder="Search.." class="email_boton" name="s">
+            <button type="submit" class="search_bt">Search</button>
             </div>
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <input type="text" class="email_boton" placeholder="category" name="Email">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <button class="search_bt">Search</button>
-                </div>
-            </div>
+        </form>
+
+    </div>
             <div class="fashion_menu">
                 <ul>
                     {% for category in blablabla %}
@@ -54,6 +49,9 @@
 <!-- search box end -->
 <!-- section POPULAR STORES start -->
 {% block show_category %}
+{% endblock %}
+
+{% block search_posts %}
 {% endblock %}
 <!-- section POPULAR STORES end -->
 
