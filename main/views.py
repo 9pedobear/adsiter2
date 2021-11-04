@@ -148,3 +148,16 @@ def contact(request):
         'main/contact.html',
         {'form': form}
     )
+
+class ShowCategoriesPost(ListView):
+    model = Post
+    template_name = 'main/show_category_posts.html'
+    context_object_name = 'category_post'
+    #
+    # def get_queryset(self):
+    #     return Post.objects.filter(category__pk=self.kwargs['pk'])
+    #
+    # def get_context_data(self, *, object_list=None, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['title'] = Category.objects.get(pk=self.kwargs['pk'])
+    #     return context
