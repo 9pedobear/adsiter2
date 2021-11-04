@@ -1,24 +1,23 @@
 {% extends 'main/index.html' %}
 
-
-{% block show_category_posts %}
+{% block show_category %}
 <div class="layout_padding popular_section">
     <div class="container">
         <h1 class="popular_taital">POPULAR <span style="border-bottom: 5px solid #4bc714;">STORES</span></h1>
         <div id="main_slider" class="carousel slide" data-ride="carousel">
-			{% for cp in category_post %}
+            {% for post in lalala %}
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="popular_section_2">
-                        <div class="slider_img"><img src="{{ cp.image.url }}" style="max-width: 100%;">
+                        <div class="slider_img"><img src="{{ post.image.url }}" width="800" style="max-width: 100%;">
                         </div>
-                        <h2 class="electronic_text">{{ cp.title }}</h2>
-                        <p class="contrary_text">Views - {{cp.views}}  Likes - {{cp.likes}}</p>
-                        <button class="view_bt"><a href="{{ cp.get_absolute_url }}">Подробнее</a></button>
+                        <h2 class="electronic_text">{{post.title}}</h2>
+                        <p class="contrary_text">Likes - {{post.likes}}   Views - {{post.views}}</p>
+                        <button class="view_bt"><a href="{{post.get_absolute_url }}">Подробнее</a></button>
                     </div>
                 </div>
             </div>
-			{% endfor %}
+            {% endfor %}
             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                 <i class="fa fa-angle-left"></i>
             </a>

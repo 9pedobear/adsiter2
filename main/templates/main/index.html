@@ -44,7 +44,7 @@
             <div class="fashion_menu">
                 <ul>
                     {% for category in blablabla %}
-                    <li><a href="{% url 'category' %}">{{ category.title }}</a></li>
+                    <li><a href="{{category.get_absolute_url}}">{{ category.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -53,7 +53,7 @@
 </div>
 <!-- search box end -->
 <!-- section POPULAR STORES start -->
-{% block show_category_posts %}
+{% block show_category %}
 {% endblock %}
 <!-- section POPULAR STORES end -->
 
