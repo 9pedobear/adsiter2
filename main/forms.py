@@ -50,3 +50,15 @@ class ContactForm(forms.ModelForm):
             'phone' : forms.TextInput(attrs={'class':'email-bt', 'placeholder':'Телефон'}),
             'message' : forms.Textarea(attrs={'class':'massage-bt', 'placeholder':'Сообщение', 'rows':'5'}),
         }
+
+
+# class SearchForm(forms.ModelForm):
+#     class Meta:
+#         model = Post
+#         fields = ['title',]
+#         widgets = {
+#             'title' : forms.TextInput(attrs={
+#                 'class':'email_boton',
+#                 'placeholder': 'Search for',
+#             })
+#         }
